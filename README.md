@@ -1,3 +1,4 @@
 # Mapbox GL - React - Redux Template
 
-Working nicely.
+## 20210720-13:34
+

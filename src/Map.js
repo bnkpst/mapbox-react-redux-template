@@ -1,17 +1,19 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect} from 'react';
 import mapboxgl from 'mapbox-gl';
+
+import {useMap} from "./MapContext";
 
 import {aus_states} from "./data/aus_states";
 import {MB_KEY} from "./config";
 
 const Map = (props) => {
 
+
     const mapContainerRef = useRef(null);
-    const [, setMap] = useState(null);
+    const [, setMap] = useMap(null);
 
     // Initialize map when component mounts
     useEffect(() => {
-
 
         const map = new mapboxgl.Map({
             container: mapContainerRef.current,
@@ -60,11 +62,13 @@ const Map = (props) => {
 
             // Last thing...
             setMap(map);
+
+            props.loaded();
         });
 
         // Clean up on unmount
         return () => map.remove();
-    }, []);
+    }, [setMap]);
 
     return (
         <div>
