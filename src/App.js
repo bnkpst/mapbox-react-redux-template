@@ -1,5 +1,10 @@
 import React from 'react';
-// import Map from './Map';
+
+import Map from './Map';
+import Sidebar from "./components/Sidebar";
+
+// import {sample_div_list} from "./utility";
+
 // import { Provider } from 'react-redux';
 // import { store } from './redux/store';
 // import { connect } from 'react-redux';
@@ -14,16 +19,18 @@ import React from 'react';
 // }
 
 const App = () => {
+
     return (
-        <div className='app-container'>
+        <div>
             <div className='lr-container'>
                 <div className='left-side'>
-                    Left
+                    <Sidebar title='TSP'>
+                        {/*{sample_div_list(9)}*/}
+                    </Sidebar>
                 </div>
                 <div className='right-side'>
-                    Right
+                    <Map></Map>
                 </div>
-
             </div>
         </div>
         // <Provider store={store}>

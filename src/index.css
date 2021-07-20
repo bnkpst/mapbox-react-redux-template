@@ -1,9 +1,7 @@
-.app-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+
+.map-container {
+    height: 100vh;
+    background-color: #d4d4d4;
 }
 
 .lr-container {
@@ -21,4 +19,9 @@
 
 .right-side {
     flex-grow: 1;
+}
+
+.scroll-container {
+    height: calc(100vh - 64px);
+    overflow-y: auto;
 }
