@@ -1,0 +1,24 @@
+.app-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.lr-container {
+    display: flex;
+    flex-direction: row;
+    /*height: calc(100% - 54px);*/
+    height: 100%;
+}
+
+.left-side {
+    flex-grow: 1;
+    background: #ccc;
+    max-width: 30%;
+}
+
+.right-side {
+    flex-grow: 1;
+}
